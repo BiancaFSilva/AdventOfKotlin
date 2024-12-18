@@ -1,21 +1,42 @@
+import kotlin.math.abs
+
+// Day 1: Historian Hysteria
 fun main() {
-    fun part1(input: List<String>): Int {
-        return input.size
+    // Separa o input em duas colunas
+    fun identificaColunas(input: List<String>): Pair<List<Int>, List<Int>> {
+        return input.map { linha ->
+            val esquerda = linha.substringBefore(" ").toInt()
+            val direita = linha.substringAfterLast(" ").toInt()
+
+            esquerda to direita
+        }.unzip()
     }
 
-    fun part2(input: List<String>): Int {
-        return input.size
+    fun resolveParteUm(input: List<String>): Int {
+        val (primeiraColuna, segundaColuna) = identificaColunas(input)
+
+        val resultado = primeiraColuna.sorted().zip(segundaColuna.sorted()).map { (esquerda, direita) ->
+            abs(esquerda - direita)
+        }.sum()
+
+        return resultado
     }
 
-    // Test if implementation meets criteria from the description, like:
-    check(part1(listOf("test_input")) == 1)
+    fun resolveParteDois(input: List<String>): Int {
+        val (primeiraColuna, segundaColuna) = identificaColunas(input)
 
-    // Or read a large test input from the `src/Day01_test.txt` file:
-    val testInput = readInput("Day01_test")
-    check(part1(testInput) == 1)
+        val direita = segundaColuna.groupingBy { it }.eachCount()
+        val resultado = primeiraColuna.sumOf { esquerda ->
+            direita[esquerda]?.times(esquerda) ?: 0
+        }
 
-    // Read the input from the `src/Day01.txt` file.
+        return resultado
+    }
+
+    // Recebe os dados do input fornecido para o 1º dia.
     val input = readInput("Day01")
-    part1(input).println()
-    part2(input).println()
+
+    // Resultados
+    resolveParteUm(input).println()         // 3508942
+    resolveParteDois(input).println()       // 26593248
 }

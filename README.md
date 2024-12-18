@@ -1,14 +1,7 @@
-# AdventOfKotlin
+<img align="left" width="20%" src="https://github.com/user-attachments/assets/a7520f23-a6e6-49c2-bb2e-af4f6780492f" >
 
-Welcome to the Advent of Code[^aoc] Kotlin project created by [biancafsilva][github] using the [Advent of Code Kotlin Template][template] delivered by JetBrains.
-
-In this repository, biancafsilva is about to provide solutions for the puzzles using [Kotlin][kotlin] language.
-
-If you're stuck with Kotlin-specific questions or anything related to this template, check out the following resources:
-
-- [Kotlin docs][docs]
-- [Kotlin Slack][slack]
-- Template [issue tracker][issues]
+# Advent of Code
+Solutions for the Advent of Code[^aoc] 2024 puzzles made in [Kotlin][kotlin] language using the [Advent of Code Kotlin Template][template] delivered by JetBrains.
 
 
 [^aoc]:
@@ -17,9 +10,5 @@ If you're stuck with Kotlin-specific questions or anything related to this templ
     You can solve the puzzle and provide an answer using the language of your choice.
 
 [aoc]: https://adventofcode.com
-[docs]: https://kotlinlang.org/docs/home.html
-[github]: https://github.com/biancafsilva
-[issues]: https://github.com/kotlin-hands-on/advent-of-code-kotlin-template/issues
 [kotlin]: https://kotlinlang.org
-[slack]: https://surveys.jetbrains.com/s3/kotlin-slack-sign-up
 [template]: https://github.com/kotlin-hands-on/advent-of-code-kotlin-template
