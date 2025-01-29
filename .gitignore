@@ -2,5 +2,11 @@
 .idea
 .kotlin/
 build
-src/**/*.txt
 local.properties
+
+# Inputs do Advent of Code
+src/**/*.txt
+
+# Arquivos em processo de conversão para Kotlin
+src/Day1*.kt
+src/Day2*.kt
